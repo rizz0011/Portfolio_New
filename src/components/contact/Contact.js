@@ -3,7 +3,6 @@ import './contact.css'
 import { MdEmail } from 'react-icons/md'
 import emailjs from 'emailjs-com'
 import {BsMessenger} from 'react-icons/bs'
-import {BsLinkedin} from 'react-icons/bs'
 import {BsInstagram} from 'react-icons/bs'
 
 import { ToastContainer, toast } from 'react-toastify';
