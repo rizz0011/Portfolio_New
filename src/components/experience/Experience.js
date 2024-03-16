@@ -78,15 +78,21 @@ function Experience() {
               <BsFillPatchCheckFill className='experience__details-icon'/>
               <div>
                 
-              <h4>Core Java</h4>
+              <h4>Node JS</h4>
+              <small className='text-light'>Intermediate</small>
+                </div>
+            </article>
+            <article className='experience__details'>
+              <BsFillPatchCheckFill className='experience__details-icon'/>
+              <div> 
+              <h4>Express JS</h4>
               <small className='text-light'>Intermediate</small>
                 </div>
             </article>
             <article className='experience__details'>
               <BsFillPatchCheckFill className='experience__details-icon'/>
               <div>
-                
-              <h4>MYSQL</h4>
+              <h4>MongoDB</h4>
               <small className='text-light'>Intermediate</small>
                 </div>
             </article>

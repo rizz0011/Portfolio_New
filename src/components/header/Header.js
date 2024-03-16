@@ -11,7 +11,7 @@ function Header() {
       <div className='container header__container'>
         <h3>Hello I'm</h3>
         <h2>Rizwan Ahmad Khan</h2>
-        <h5 className='text-light'>Software Developer</h5>
+        <h5 className='text-light'>Software Engineer</h5>
         <CTA />
         <HeaderSocials />
 
