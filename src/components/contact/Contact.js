@@ -1,75 +1,87 @@
-import React from 'react'
-import './contact.css'
-import { MdEmail } from 'react-icons/md'
-import emailjs from 'emailjs-com'
-import {BsMessenger} from 'react-icons/bs'
-import {BsInstagram} from 'react-icons/bs'
+import React from "react";
+import "./contact.css";
+import { MdEmail } from "react-icons/md";
+import { BsMessenger } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
+  const form = React.useRef();
 
-  const form = React.useRef()
+  const sendEmail = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
+    formData.append("access_key", "2baef531-8d7f-4c53-b6f3-7b001fb2e746");
 
-
-  const sendEmail = (e) => {
-   
-   e.preventDefault();
-   toast.success("Message send successfully!",{
-    position:'top-center' ,
-    autoClose: 1000,
-   });
-    emailjs.sendForm('service_9yq19jt', 'template_3alzfhk', form.current, 't7PGuY_hSyR_DQ6by')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    if (data.success) {
+      toast.success("Message send successfully!", {
+        position: "top-center",
+        autoClose: 1000,
       });
-      e.target.reset()
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      toast.error("Opps something went wrong!", {
+        position: "top-center",
+        autoClose: 1000,
+      });
+    }
   };
 
-
   return (
-    <section id='contact'>
+    <section id="contact">
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
 
-      <div className='container contact__container'>
-        <div className='contact__options'>
-          <article className='contact__option'>
+      <div className="container contact__container">
+        <div className="contact__options">
+          <article className="contact__option">
             <MdEmail />
             <h4>Email</h4>
             <h5>ahmadkhanrizwan0@gmail.com</h5>
-            <a href='mailto:ahmadkhanrizwan0@gmail.com'>Send a message</a>
+            <a href="mailto:ahmadkhanrizwan0@gmail.com">Send a message</a>
           </article>
 
-          <article className='contact__option'>
+          <article className="contact__option">
             <BsMessenger />
             <h4>Messenger</h4>
-            <a href='https://m.me/rizwan.iftekhar.9'>Send a message</a>
+            <a href="https://m.me/rizwan.iftekhar.9">Send a message</a>
           </article>
 
-          <article className='contact__option'>
-            <BsInstagram/>
+          <article className="contact__option">
+            <BsInstagram />
             <h4>Instagram</h4>
-            <a href='https://instagram.com/rizz_khan0?igshid=YmMyMTA2M2Y='>Send a message</a>
+            <a href="https://www.instagram.com/rizz__khan0/?hl=en">
+              Send a message
+            </a>
           </article>
-
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input type='text' name='name' placeholder='Your full Name' required />
-          <input type='email' name='email' placeholder='Your Email' required />
-          <textarea name='message' placeholder='Your Message' required />
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your full Name"
+            required
+          />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required />
+          <button type="submit" className="btn btn-primary">
+            Send Message
+          </button>
         </form>
       </div>
-     
+
       <ToastContainer />
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

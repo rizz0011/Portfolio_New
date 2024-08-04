@@ -6,23 +6,19 @@ import Ecom from "../../assets/e-com.png";
 import TodoList from "../../assets/todolist.png";
 import Quiz from "../../assets/quiz.png";
 import PortfolioImg from "../../assets/portfolioClient.png";
+import luxurious from "../../assets/luxuriousSofa.png"
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Portfolio() {
-
-
-const handleClick = () => {
-  toast.warn("This is not deplyoed yet You can visit github to get code.",{
-    position:'top-center' ,
-    autoClose: 4000,
-    theme: "colored",
-   });
-
-}
-
-
+  const handleClick = () => {
+    toast.warn("This is not deplyoed yet You can visit github to get code.", {
+      position: "top-center",
+      autoClose: 4000,
+      theme: "colored",
+    });
+  };
 
   return (
     <section id="portfolio">
@@ -40,7 +36,7 @@ const handleClick = () => {
             functionality to perform mathematical operation.
           </p>
           <div className="portfolio__item-cta">
-            <a  className="btn btn-primary" onClick={handleClick}>
+            <a className="btn btn-primary" onClick={handleClick}>
               Live Demo
             </a>
           </div>
@@ -73,7 +69,7 @@ const handleClick = () => {
             completed as well can be removed from the list if not needed.
           </p>
           <div className="portfolio__item-cta">
-            <a  className="btn btn-primary" onClick={handleClick}>
+            <a className="btn btn-primary" onClick={handleClick}>
               Live Demo
             </a>
           </div>
@@ -91,7 +87,11 @@ const handleClick = () => {
             reporting.
           </p>
           <div className="portfolio__item-cta">
-            <a href="https://cricket-quiz-app.netlify.app" className="btn btn-primary" target="_blank">
+            <a
+              href="https://cricket-quiz-app.netlify.app"
+              className="btn btn-primary"
+              target="_blank"
+            >
               Live Demo
             </a>
           </div>
@@ -103,12 +103,39 @@ const handleClick = () => {
           </div>
           <h3>Portfolio</h3>
           <p>
-            Designed and developed a portfolio using HTML, CSS, and JavaScript with full functionality 
-            showcasing my skills and projects. Worked independently to build a
-            responsive UI. 
+            Designed and developed a portfolio using HTML, CSS, and JavaScript
+            with full functionality showcasing my skills and projects. Worked
+            independently to build a responsive UI.
           </p>
           <div className="portfolio__item-cta">
-            <a href="https://rizwan-ahmad.netlify.app" className="btn btn-primary" target="_blank">
+            <a
+              href="https://rizwan-ahmad.netlify.app"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </div>
+        </article>
+
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+            <img src={luxurious} alt="" />
+          </div>
+          <h3>Luxurious Sofa Furniture</h3>
+          <p>
+            This project involved creating an elegant and functional online
+            presence for the client, showcasing their luxurious sofas, modern
+            furniture, and other offerings. The website features a user-friendly
+            interface, a responsive design, and optimized performance to enhance
+            the user experience.
+          </p>
+          <div className="portfolio__item-cta">
+            <a
+              href="https://luxuriousfurniture.netlify.app/"
+              className="btn btn-primary"
+              target="_blank"
+            >
               Live Demo
             </a>
           </div>

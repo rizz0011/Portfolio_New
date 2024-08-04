@@ -23,13 +23,13 @@ function About() {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>2.7+ Years Working</small>
+              <small>3+ Years Working</small>
             </article>
 
             <article className="about__card">
               <FaHouseUser className="about__icon" />
               <h5>Web Developer</h5>
-              <small>2.6+ Years Working</small>
+              <small>3+ Years Working</small>
             </article>
 
             <article className="about__card">
@@ -40,17 +40,17 @@ function About() {
           </div>
 
           <p>
-            I am Rizwan Ahmad Khan, having 2+ years of hands-on experience in
-            wed development, I am passionate about creating dynamic and
-            user-friendly web applications. Proficient in front-end development,
-            I excel at building responsive interfaces and optimizing application
+            I am Rizwan Ahmad Khan, a dedicated web developer with over 3 years
+            of experience in front-end development. I am passionate about
+            creating dynamic and user-friendly web applications. I excel in
+            building responsive interfaces and optimizing application
             performance. As a software developer, my main focus is on designing,
-            developing, and maintaining software applications. I have working
-            experience in web development and strong knowledge in this field
-            over time. I am always enjoy learning new technologies and
-            techniques. My goal is to develop high-quality software solutions
-            that meet the needs of end-users. Hire me for building creative and
-            innovative Application.
+            developing, and maintaining software applications. I have a strong
+            foundation in web development and continuously seek to expand my
+            knowledge by learning new technologies and techniques. My goal is to
+            develop high-quality software solutions that meet the needs of
+            end-users. Hire me to build creative and innovative applications
+            that stand out.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
