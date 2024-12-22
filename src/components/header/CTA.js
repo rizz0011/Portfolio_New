@@ -1,5 +1,5 @@
 import React from 'react'
-import React_dev_3y_Rizwan from '../../assets/React_dev_3y_Rizwan.pdf'
+import React_dev_3y_Rizwan from '../../assets/Rizwan_Reactjs_3y.pdf'
 
 function CTA() {
     return (
