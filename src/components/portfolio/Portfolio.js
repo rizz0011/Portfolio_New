@@ -109,7 +109,7 @@ function Portfolio() {
           </p>
           <div className="portfolio__item-cta">
             <a
-              href="https://rizwan-ahmad.netlify.app"
+              href=""
               className="btn btn-primary"
               target="_blank"
             >
