@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import IMG from "../../assets/me2.jpeg";
 import { FaAward } from "react-icons/fa";
 import { FaHouseUser } from "react-icons/fa";
 import { GoProject } from "react-icons/go";
@@ -14,7 +13,6 @@ function About() {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={IMG} alt="" />
           </div>
         </div>
 
